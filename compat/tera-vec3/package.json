@@ -1,0 +1,12 @@
+{
+  "name": "tera-vec3",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deprecated compatibility shim for @anemanator/vec3.",
+  "main": "index.js",
+  "dependencies": {
+    "@anemanator/vec3": "*",
+    "@anemanator/toolbox-mui": "*"
+  },
+  "author": "Noctenium Elixir"
+}

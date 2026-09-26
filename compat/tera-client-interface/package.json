@@ -1,0 +1,12 @@
+{
+  "name": "tera-client-interface",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deprecated compatibility shim for @anemanator/client-interface.",
+  "main": "index.js",
+  "dependencies": {
+    "@anemanator/client-interface": "*",
+    "@anemanator/toolbox-mui": "*"
+  },
+  "author": "Noctenium Elixir"
+}

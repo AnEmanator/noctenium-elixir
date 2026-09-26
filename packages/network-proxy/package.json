@@ -1,0 +1,24 @@
+{
+  "author": "Noctenium Elixir",
+  "contributors": [
+    "Caali",
+    "Pinkie Pie",
+    "meishu"
+  ],
+  "dependencies": {
+    "binary-search": "^1.3.2",
+    "@anemanator/network-crypto": "*",
+    "@anemanator/data-parser": "*"
+  },
+  "description": "Network proxy with modular event handling.",
+  "engines": {
+    "node": ">=11.4.0"
+  },
+  "files": [
+    "lib/"
+  ],
+  "license": "GPL-3.0",
+  "main": "lib/index.js",
+  "name": "@anemanator/network-proxy",
+  "version": "1.0.0"
+}

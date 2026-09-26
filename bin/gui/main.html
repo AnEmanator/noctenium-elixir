@@ -1,0 +1,313 @@
+﻿<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" id="theme" href="css/themes/elixir-dark.css">
+	<script>window.$ = window.jQuery = require('./js/jquery-3.5.1.slim.min.js');</script>
+	<script src="js/main.js"></script>
+</head>
+
+<body>
+	<!--<div id="snowflakeContainer">
+		<span class="snowflake"></span>
+	</div>-->
+	<!-- Modal Box -->
+	<div id="modalbox" class="modalbox">
+		<div class="modalbox-content">
+			<div id="modalbox-text" class="modalbox-text"></div>
+			<div id="modalbox-buttons" class="modalbox-buttons" style="display:none">
+				<button id="modalbox-no"></button>
+				<button id="modalbox-yes"></button>
+			</div>
+		</div>
+	</div>
+	<!-- Header -->
+	<div class="header-base noselect">
+		<div class="header-icon" id="icon"></div>
+		<div class="header-text" id="title" mui="gui/main/title"></div>
+		<div class="admin-badge admin-badge-disabled" id="admin-badge">
+			<i class="mdi mdi-security"></i>
+		</div>
+		<div class="header-status" id="title-status"></div>
+		<div class="header-button" id="info-btn">
+			<i class="mdi mdi-information-variant"></i>
+		</div>
+		<div class="header-button" id="minimize-btn">
+			<i class="mdi mdi-window-minimize"></i>
+		</div>
+		<div class="header-button" id="close-btn">
+			<i class="mdi mdi-close"></i>
+		</div>
+	</div>
+	<!-- Controls -->
+	<div class="tabs-base noselect">
+		<div></div>
+		<input type="radio" name="tabs" id="tabone" checked data-tab="1">
+		<label for="tabone">
+			<span class="mdi mdi-console"></span>
+			<span mui="gui/main/static/tabs/log/title"></span>
+		</label>
+		<input type="radio" name="tabs" id="tabtwo" data-tab="2">
+		<label for="tabtwo">
+			<span class="mdi mdi-archive-outline"></span>
+			<span mui="gui/main/static/tabs/mods/title"></span>
+		</label>
+		<input type="radio" name="tabs" id="tabthree" data-tab="3">
+		<label for="tabthree">
+			<span class="mdi mdi-archive-arrow-down-outline"></span>
+			<span mui="gui/main/static/tabs/newmods/title"></span>
+		</label>
+		<input type="radio" name="tabs" id="tabfour" data-tab="4">
+		<label for="tabfour">
+			<span class="mdi mdi-cog-outline"></span>
+			<span mui="gui/main/static/tabs/settings/title"></span>
+		</label>
+		<div id="bridge-status" class="bridge-status" role="tooltip" data-microtip-position="bottom-left" aria-label=""></div>
+		<button id="startproxy-btn" tabindex="-1">
+			<span id="startproxyicon" class="mdi mdi-play-pause"></span>
+			<span id="startproxy"></span>
+		</button>
+	</div>
+
+	<!-- Logs -->
+	<div class="tab tab--active" data-tab="1">
+		<div class="floating-elem" id="clear-logs">
+			<i class="mdi mdi-close"></i>
+		</div>
+		<div class="floating-elem-two" id="save-logs">
+			<i class="mdi mdi-content-save-outline"></i>
+		</div>
+		<div class="flex-column log-contents scroller" id="log-contents">
+		</div>
+	</div>
+
+	<!-- Installed Modules -->
+	<div class="tab" data-tab="2">
+		<div class="flex-column">
+			<!-- Secondary functions -->
+			<div class="control-secondary">
+				<label class="secondary-button" id="mods-btn">
+					<span class="mdi mdi-folder-table-outline"></span>
+					<span mui="gui/main/static/tabs/modsfolder/title"></span>
+				</label>
+				<div class="spacer"></div>
+				<label class="secondary-button view-toggle" id="mods-view-list" role="tooltip" data-microtip-position="bottom-left" aria-label="">
+					<span class="mdi mdi-format-list-bulleted"></span>
+				</label>
+				<label class="secondary-button view-toggle" id="mods-view-card" role="tooltip" data-microtip-position="bottom-left" aria-label="">
+					<span class="mdi mdi-view-grid-outline"></span>
+				</label>
+			</div>
+			<div class="scroller-small" id="modulesView">
+				<div id="modulesList"></div>
+				<div id="modulesDetail" class="mod-detail" style="display:none"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modules for install -->
+	<div class="tab" data-tab="3">
+		<div class="flex-column">
+			<!-- Search bar -->
+			<div class="control-secondary">
+				<label><span mui="gui/main/static/tabs/newmods/content/filter"></span><input type="text"
+						id="installableModulesFilterString" /></label>
+				<details class="kw-dropdown" id="installableModulesFilterKeywords">
+					<summary><span mui="gui/main/static/tabs/newmods/content/filter/keywords"></span></summary>
+					<div class="kw-dropdown-menu"></div>
+				</details>
+				<div class="spacer"></div>
+				<label class="secondary-button view-toggle" id="newmods-view-list" role="tooltip" data-microtip-position="bottom-left" aria-label="">
+					<span class="mdi mdi-format-list-bulleted"></span>
+				</label>
+				<label class="secondary-button view-toggle" id="newmods-view-card" role="tooltip" data-microtip-position="bottom-left" aria-label="">
+					<span class="mdi mdi-view-grid-outline"></span>
+				</label>
+			</div>
+			<!-- Loading -->
+			<div id="loading" class="scroller-small">
+				<img src="assets/tb.gif" />
+				<div mui="gui/main/static/tabs/newmods/loading"></div>
+			</div>
+			<!-- Modules for install content -->
+			<div class="scroller-small" id="installableModulesView">
+				<div id="installableModulesList"></div>
+				<div id="installableModulesDetail" class="mod-detail" style="display:none"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Settings -->
+	<div class="tab" data-tab="4">
+		<div class="scroller">
+			<div class="settings-group">
+				<div class="settings-group-title" mui="gui/main/static/tabs/settings/toolbox"></div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/version"></div>
+					</div>
+					<div class="setting-control"><span id="appversion"></span></div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/uilanguage"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/uilanguage/description"></div>
+					</div>
+					<div class="setting-control">
+						<select id="uilanguage"></select>
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/theme"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/theme/description"></div>
+					</div>
+					<div class="setting-control">
+						<select id="uithemes"></select>
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/autostart"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/autostart/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="autostart" type="checkbox">
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/updatelog"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/updatelog/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="updatelog" type="checkbox">
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/logtimes"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/logtimes/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="logtimes" type="checkbox">
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/minimizetotray"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/minimizetotray/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="minimizetotray" type="checkbox">
+					</div>
+				</div>
+			</div>
+			<div class="settings-group">
+				<div class="settings-group-title" mui="gui/main/static/tabs/settings/noctenium"></div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/noctenium/gamebinaries"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/noctenium/gamebinaries/description"></div>
+					</div>
+					<div class="setting-control setting-control--path">
+						<input id="nox-gamebinaries" type="text" spellcheck="false">
+						<button id="nox-browse" class="secondary-button" mui="gui/main/static/tabs/settings/content/noctenium/browse"></button>
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/noctenium/clientinterface"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/noctenium/clientinterface/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="nox-clientinterface" type="checkbox">
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/noctenium/version"></div>
+					</div>
+					<div class="setting-control"><span id="nox-version"></span></div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/noctenium/bridge"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/noctenium/bridge/description"></div>
+					</div>
+					<div class="setting-control setting-control--buttons">
+						<button id="nox-install" class="secondary-button" mui="gui/main/static/tabs/settings/content/noctenium/install"></button>
+						<button id="nox-uninstall" class="secondary-button" mui="gui/main/static/tabs/settings/content/noctenium/uninstall"></button>
+					</div>
+				</div>
+			</div>
+			<details class="settings-group settings-group--advanced">
+				<summary class="settings-group-title" mui="gui/main/static/tabs/settings/advanced"></summary>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/noctenium/ipcport"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/noctenium/ipcport/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="nox-ipcport" type="number" min="1024" max="65535">
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/noctenium/packettimeout"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/noctenium/packettimeout/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="nox-packettimeout" type="number" min="1" max="10000">
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/noctenium/activationtimeout"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/noctenium/activationtimeout/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="nox-activationtimeout" type="number" min="1" max="60000">
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/devmode"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/devmode/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="devmode" type="checkbox">
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/cleanstart"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/cleanstart/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="cleanstart" type="checkbox">
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/noupdate"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/noupdate/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="noupdate" type="checkbox">
+					</div>
+				</div>
+				<div class="setting noselect">
+					<div class="setting-label">
+						<div mui="gui/main/static/tabs/settings/content/noselfupdate"></div>
+						<div class="setting-desc" mui="gui/main/static/tabs/settings/content/noselfupdate/description"></div>
+					</div>
+					<div class="setting-control">
+						<input id="noselfupdate" type="checkbox">
+					</div>
+				</div>
+			</details>
+		</div>
+	</div>
+</body>
+
+</html>

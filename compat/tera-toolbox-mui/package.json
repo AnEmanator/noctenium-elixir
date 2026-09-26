@@ -1,0 +1,11 @@
+{
+  "name": "tera-toolbox-mui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deprecated compatibility shim for @anemanator/toolbox-mui.",
+  "main": "index.js",
+  "dependencies": {
+    "@anemanator/toolbox-mui": "*"
+  },
+  "author": "Noctenium Elixir"
+}

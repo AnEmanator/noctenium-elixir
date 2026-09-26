@@ -1,0 +1,14 @@
+{
+  "name": "@anemanator/network-crypto",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Encryption and decryption of the game's protocol streams.",
+  "main": "index.js",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Noctenium Elixir",
+  "contributors": [
+    "Caali",
+    "Pinkie Pie",
+    "meishu"
+  ]
+}

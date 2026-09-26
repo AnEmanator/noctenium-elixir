@@ -1,0 +1,12 @@
+{
+  "name": "@anemanator/toolbox-mui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multilingual UI string tables for Noctenium Elixir.",
+  "main": "index.js",
+  "license": "GPL-3.0",
+  "author": "Noctenium Elixir",
+  "contributors": [
+    "Caali"
+  ]
+}

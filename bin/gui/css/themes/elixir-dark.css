@@ -1,0 +1,35 @@
+/* Elixir Dark - the default theme. Radix Slate + Jade, dark ramps.
+   Colour ramps only. Roles are mapped in ../semantic.css */
+:root {
+    /* neutrals - Radix Slate (dark) */
+    --gray-1: #111113;
+    --gray-2: #18191b;
+    --gray-3: #212225;
+    --gray-4: #272a2d;
+    --gray-5: #2e3135;
+    --gray-6: #363a3f;
+    --gray-7: #43484e;
+    --gray-8: #5a6169;
+    --gray-9: #696e77;
+    --gray-10: #777b84;
+    --gray-11: #b0b4ba;
+    --gray-12: #edeef0;
+
+    /* accent - Radix Jade (dark). step 9 is the Elixir accent */
+    --accent-1: #0d1512;
+    --accent-2: #121c18;
+    --accent-3: #0f2e22;
+    --accent-4: #0b3b2c;
+    --accent-5: #114837;
+    --accent-6: #1b5745;
+    --accent-7: #246854;
+    --accent-8: #2a7e68;
+    --accent-9: #29a383;
+    --accent-10: #27b08b;
+    --accent-11: #1fd8a4;
+    --accent-12: #adf0d4;
+
+    /* functional */
+    --accent-contrast: #ffffff;
+    --overlay: rgba(0, 0, 0, 0.6);
+}

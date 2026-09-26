@@ -1,0 +1,12 @@
+{
+  "name": "tera-network-crypto",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deprecated compatibility shim for @anemanator/network-crypto.",
+  "main": "index.js",
+  "dependencies": {
+    "@anemanator/network-crypto": "*",
+    "@anemanator/toolbox-mui": "*"
+  },
+  "author": "Noctenium Elixir"
+}

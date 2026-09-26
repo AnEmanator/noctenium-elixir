@@ -1,0 +1,12 @@
+{
+  "name": "tera-network-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deprecated compatibility shim for @anemanator/network-proxy.",
+  "main": "index.js",
+  "dependencies": {
+    "@anemanator/network-proxy": "*",
+    "@anemanator/toolbox-mui": "*"
+  },
+  "author": "Noctenium Elixir"
+}

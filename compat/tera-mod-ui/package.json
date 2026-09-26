@@ -1,0 +1,12 @@
+{
+  "name": "tera-mod-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deprecated compatibility shim for @anemanator/mod-ui.",
+  "main": "index.js",
+  "dependencies": {
+    "@anemanator/mod-ui": "*",
+    "@anemanator/toolbox-mui": "*"
+  },
+  "author": "Noctenium Elixir"
+}

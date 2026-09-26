@@ -1,0 +1,12 @@
+{
+  "name": "@anemanator/mod-ui",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Wrapper framework for Electron-based UIs for Noctenium Elixir mods.",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Noctenium Elixir",
+  "contributors": [
+    "Caali"
+  ]
+}

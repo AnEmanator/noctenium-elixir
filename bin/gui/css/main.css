@@ -1,0 +1,1040 @@
+@import url("./ubuntu-regular.css");
+@import url("./ubuntu-mono-regular.css");
+@import url("./materialdesignicons.min.css");
+@import url("./microtip.css");
+@import url("./semantic.css");
+
+/* ************* */
+/* BASIC         */
+/* ************* */
+body {
+	font-family: Ubuntu, sans serif;
+	overflow: hidden;
+	background: var(--bg);
+	color: var(--text);
+	margin: 0px;
+	border-style: solid;
+	border-color: var(--bg);
+	border-width: 1px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+label {
+	font-size: 14px;
+}
+
+p {
+	margin: 1px;
+	margin-right: 5px;
+	font-size: 14px;
+}
+
+/* ************* */
+/* SELECTION     */
+/* ************* */
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+::selection {
+	background: var(--selection);
+}
+
+/* ************* */
+/* SCROLLBAR     */
+/* ************* */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg-subtle);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--border);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--border-strong);
+}
+
+/* ************* */
+/* HEADER     */
+/* ************* */
+.header-base {
+	display: flex;
+	min-height: 32px;
+	height: 32px;
+	background: var(--bg-subtle);
+}
+
+.header-base> * {
+	font-size: 14px;
+}
+
+.header-icon {
+	-webkit-app-region: drag;
+	width: 24px;
+	height: 24px;
+	margin: 4px;
+	background-image: url(../assets/icon.ico);
+	background-size: 24px;
+}
+
+.header-button {
+	margin-bottom: 6px;
+	font-size: 20px;
+	padding: 2px;
+	text-align: center;
+	vertical-align: middle;
+	transition: background ease 0.32s;
+	cursor: pointer;
+}
+.mod-action-button {
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	padding: 2px;
+	text-align: center;
+	vertical-align: middle;
+	transition: background ease 0.32s;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.header-button:hover {
+	background-color: var(--element-hover);
+}
+.mod-action-button:hover {
+	background-color: var(--element-hover);
+}
+
+.header-text {
+	-webkit-app-region: drag;
+	padding-top: 8px;
+	padding-right: 7px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.header-status {
+	-webkit-app-region: drag;
+	padding: 8px;
+	flex-grow: 1;
+	vertical-align: middle;
+	text-align: center;
+	opacity: 50%;
+}
+
+.admin-badge {
+	-webkit-app-region: drag;
+	vertical-align: middle;
+	padding-top: 6px;
+	font-size: 17px;
+}
+
+.admin-badge-disabled {
+	color: var(--text-muted);
+}
+
+.admin-badge-enabled {
+	color: var(--accent);
+}
+
+/* **************** */
+/* Custom secondary button*/
+/* **************** */
+
+.secondary-button {
+	padding: 4px;
+	padding-bottom: 1px;
+	height: 24px;
+	cursor: pointer;
+	transition: background ease 0.32s;
+}
+
+.secondary-button > span:first-child {
+	font-size: 17px;
+}
+
+.secondary-button:hover {
+	background-color: var(--element);
+}
+
+button.secondary-button {
+	height: auto;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	background: var(--element);
+	color: var(--text);
+	font-size: 13px;
+	padding: 4px 10px;
+}
+
+button.secondary-button:hover {
+	background: var(--element-active);
+}
+
+/* **************** */
+/* TABS ROW CONTROLS*/
+/* **************** */
+.tabs-base {
+	display: flex;
+	min-height: 36px;
+	height: 36px;
+	display: flex;
+	background: var(--bg-subtle);
+}
+
+.tabs-base label {
+	padding: 9px;
+	cursor: pointer;
+	transition: background ease 0.32s;
+	border-radius: 8px 8px 0 0;
+}
+
+.tabs-base > div:first-child {
+	margin-left: 5px;
+}
+
+.tabs-base label:hover {
+	background-color: var(--element);
+}
+
+.tabs-base label> span:first-child {
+	font-size: 17px;
+}
+
+.tabs-base button {
+	background-color: var(--accent);
+	color: var(--accent-contrast);
+	transition: background ease 0.32s;
+	border: 0px;
+	width: 170px;
+	margin-left: auto;
+	margin-right: 5px;
+	cursor: pointer;
+	border-radius: 8px 8px 0 0;
+}
+
+.tabs-base button>span:first-child {
+	font-size: 15px;
+}
+
+.tabs-base button>span:nth-child(2) {
+	font-size: 15px;
+}
+
+.tabs-base button:hover {
+	background: var(--accent-hover);
+}
+
+.tabs-base button:focus {
+	outline: 0;
+}
+
+.tabs-base input[type="radio"] {
+	display: none;
+}
+
+.tabs-base input[type="radio"]:checked+label {
+	background: var(--element-hover);
+}
+
+/* bridge status light, sits just left of the Start button */
+.bridge-status {
+	align-self: center;
+	width: 10px;
+	height: 10px;
+	margin: 0 8px 0 auto;
+	border-radius: 50%;
+	background: var(--text-muted);
+	flex-shrink: 0;
+	transition: background ease 0.2s;
+}
+
+.bridge-status.is-ok {
+	background: var(--ok);
+}
+
+.bridge-status.is-pending {
+	background: var(--warn);
+}
+
+.bridge-status.is-fail {
+	background: var(--danger);
+}
+
+/* the Start button no longer needs auto-margin once the status dot has it */
+.bridge-status + #startproxy-btn {
+	margin-left: 0;
+}
+
+/* **************** */
+/* TABS  WRAPPERS   */
+/* **************** */
+.tab {
+	display: none;
+	padding: 5px;
+	flex-grow: 1;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+.tab--active {
+	display: block;
+}
+
+/* ************* */
+/* LOG STYLES    */
+/* ************* */
+
+.log-contents {
+	background: var(--bg);
+	color: var(--text-muted);
+	padding: 1px;
+	font-family: Ubuntu Mono, monospace;
+	font-size: 14px;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+.log-contents>div.log {
+	color: var(--text-muted);
+}
+
+.log-contents>div.warn {
+	color: var(--warn);
+}
+
+.log-contents>div.error {
+	color: var(--danger);
+}
+
+.scroller-small {
+	height: calc(100vh - 118px);
+	overflow-y: auto;
+}
+
+.scroller {
+	height: calc(100vh - 84px);
+	overflow-y: auto;
+}
+
+
+/* Visible content basic style */
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+/************
+ * SETTINGS *
+ ************/
+.settings-group {
+	background: var(--bg-subtle);
+	border: 1px solid var(--border);
+	border-radius: var(--card-radius);
+	margin: 8px 2px;
+	overflow: hidden;
+}
+
+.settings-group-title {
+	padding: 10px 12px;
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--text-muted);
+}
+
+/* collapsible Advanced card */
+details.settings-group > summary.settings-group-title {
+	cursor: pointer;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+details.settings-group > summary::-webkit-details-marker {
+	display: none;
+}
+
+details.settings-group > summary::before {
+	content: "\25b8";
+	color: var(--text-muted);
+	transition: transform ease 0.15s;
+}
+
+details.settings-group[open] > summary::before {
+	transform: rotate(90deg);
+}
+
+.setting {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 10px 12px;
+	border-top: 1px solid var(--border);
+	font-size: 14px;
+}
+
+.setting-label {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+}
+
+.setting-desc {
+	font-size: 12px;
+	color: var(--text-muted);
+}
+
+.setting-control {
+	flex-shrink: 0;
+}
+
+.setting-control--path {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	min-width: 0;
+}
+
+.setting-control--path input {
+	width: 220px;
+	max-width: 40vw;
+	background: var(--element);
+	color: var(--text);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	padding: 3px 8px;
+	font-size: 13px;
+}
+
+.setting-control--buttons {
+	display: flex;
+	gap: 6px;
+}
+
+.setting-control input[type="number"] {
+	width: 90px;
+	background: var(--element);
+	color: var(--text);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	padding: 3px 8px;
+	font-size: 14px;
+}
+
+/* theme the native dropdowns */
+.settings-group select {
+	background: var(--element);
+	color: var(--text);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	padding: 3px 8px;
+	font-size: 14px;
+}
+
+/* toggle switch - scoped past the global input[type=checkbox] rule (still used by
+   the Get More Mods keyword filter), and explicit on every property that rule and
+   its :checked::after tick set, so nothing leaks through */
+.settings-group .setting-control input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	position: relative;
+	width: 34px;
+	height: 20px;
+	margin: 0;
+	border-radius: 999px;
+	background: var(--element);
+	border: 1px solid var(--border);
+	cursor: pointer;
+	transition: background ease 0.15s, border-color ease 0.15s;
+}
+
+.settings-group .setting-control input[type="checkbox"]::after,
+.settings-group .setting-control input[type="checkbox"]:checked::after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 14px;
+	height: 14px;
+	border: 0;
+	border-radius: 50%;
+	background: var(--text-muted);
+	transform: translateX(0);
+	transition: transform ease 0.15s, background ease 0.15s;
+}
+
+.settings-group .setting-control input[type="checkbox"]:checked {
+	background: var(--accent);
+	border-color: var(--accent);
+}
+
+.settings-group .setting-control input[type="checkbox"]:checked::after {
+	background: var(--accent-contrast);
+	transform: translateX(14px);
+}
+
+.control-secondary {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: transparent;
+	margin: 1px;
+	padding-top: 2px;
+    margin-bottom: 2px;
+    height: 32px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.control-secondary > *{
+	margin-right: 3px;
+	padding-top: 1px;
+}
+
+/* keyword filter dropdown (Get More Mods) */
+.kw-dropdown {
+	position: relative;
+}
+
+.kw-dropdown > summary {
+	display: block;
+	list-style: none;
+	cursor: pointer;
+	padding: 3px 8px;
+	border-radius: 6px;
+	background: var(--element-hover);
+	user-select: none;
+	white-space: nowrap;
+	font-size: 14px;
+}
+
+.kw-dropdown > summary::-webkit-details-marker {
+	display: none;
+}
+
+.kw-dropdown > summary::after {
+	content: " \25be";
+	color: var(--text-muted);
+}
+
+.kw-dropdown[open] > summary {
+	background: var(--element-active);
+}
+
+.kw-dropdown-menu {
+	position: absolute;
+	z-index: 20;
+	top: 100%;
+	left: 0;
+	margin-top: 4px;
+	min-width: 150px;
+	padding: 6px;
+	background: var(--element);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.kw-dropdown-menu label {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 3px 6px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.kw-dropdown-menu label:hover {
+	background: var(--element);
+}
+
+/***********
+ * MODULES *
+ ***********/
+.spacer {
+	flex-grow: 1;
+}
+
+.view-toggle.is-active {
+	color: var(--accent-text);
+}
+
+.mods-grid--card {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 8px;
+	padding: 2px;
+}
+
+.mods-grid--list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 2px;
+}
+
+.mod-card {
+	display: flex;
+	flex-direction: column;
+	background: var(--bg-subtle);
+	border: 1px solid var(--border);
+	border-radius: var(--card-radius);
+	cursor: pointer;
+	transition: background ease 0.15s, border-color ease 0.15s;
+}
+
+.mod-card:hover {
+	background: var(--element);
+}
+
+.mod-card-head,
+.mod-card-foot {
+	display: flex;
+}
+
+.mod-card-title {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.mod-card-ver {
+	color: var(--text-muted);
+	font-weight: 400;
+}
+
+.mod-card-sub {
+	font-size: 12px;
+	color: var(--text-muted);
+}
+
+.mod-card-desc {
+	font-size: 12px;
+	color: var(--text-muted);
+}
+
+.mod-card-controls {
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+	flex-shrink: 0;
+}
+
+.mod-card-actions {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.mod-card-tags {
+	display: flex;
+	gap: 4px;
+	min-width: 0;
+	overflow: hidden;
+}
+
+.mod-tag {
+	font-size: 10px;
+	line-height: 1;
+	padding: 3px 8px;
+	border-radius: 999px;
+	white-space: nowrap;
+	background: var(--element);
+	color: var(--text-muted);
+	border: 1px solid var(--border);
+}
+
+.mod-action-button--danger {
+	color: var(--danger);
+}
+
+/* card mode: title / authors / description / [tags .. buttons], stacked */
+.mods-grid--card .mod-card {
+	gap: 3px;
+	padding: 10px;
+}
+
+.mods-grid--card .mod-card-head,
+.mods-grid--card .mod-card-foot {
+	display: contents;
+}
+
+.mods-grid--card .mod-card-desc {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	margin-top: 3px;
+}
+
+.mods-grid--card .mod-card-actions {
+	margin-top: auto;
+	padding-top: 6px;
+	justify-content: space-between;
+}
+
+/* list mode: two tight rows like the old layout, smaller buttons */
+.mods-grid--list .mod-card {
+	gap: 2px;
+	padding: 6px 10px;
+}
+
+.mods-grid--list .mod-card-head {
+	align-items: baseline;
+}
+
+.mods-grid--list .mod-card-title {
+	flex-shrink: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.mods-grid--list .mod-card-sub {
+	margin-left: auto;
+	padding-left: 8px;
+	white-space: nowrap;
+}
+
+.mods-grid--list .mod-card-foot {
+	align-items: center;
+	gap: 8px;
+}
+
+.mods-grid--list .mod-card-desc {
+	flex: 1 1 auto;
+	min-width: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.mods-grid--list .mod-card-actions {
+	flex-shrink: 0;
+}
+
+.mods-grid--list .mod-card-tags {
+	flex-shrink: 0;
+}
+
+/* reserve room for all 3 buttons so the pills line up whether or not the
+   updates toggle is shown */
+.mods-grid--list .mod-card-controls {
+	min-width: 62px;
+	justify-content: flex-end;
+}
+
+.mods-grid--list .mod-action-button {
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+	padding: 1px;
+}
+
+.mod-detail {
+	padding: 6px;
+}
+
+.mod-detail-head {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 10px;
+}
+
+.mod-detail-title {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.mod-detail-rawname {
+	font-size: 12px;
+	color: var(--text-muted);
+}
+
+.mod-detail-body {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+.mod-detail-main {
+	flex: 1;
+	min-width: 0;
+}
+
+.mod-detail-main > p {
+	color: var(--text-muted);
+	margin: 0 1px 8px 1px;
+}
+
+.mod-detail-info {
+	width: 240px;
+	flex-shrink: 0;
+	background: var(--element);
+	border-radius: var(--card-radius);
+	padding: 12px;
+	font-size: 13px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.mod-detail-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.mod-detail-actions {
+	display: flex;
+	gap: 4px;
+	flex-shrink: 0;
+}
+
+.mod-detail-info b {
+	color: var(--text-muted);
+	font-weight: 500;
+}
+
+.mod-detail-github {
+	width: 100%;
+	margin-top: 4px;
+	padding: 9px 12px;
+	border: 0;
+	border-radius: 8px;
+	background: var(--accent);
+	color: var(--accent-contrast);
+	transition: background ease 0.32s;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.mod-detail-github:hover {
+	background: var(--accent-hover);
+}
+
+.mod-readme {
+	font-size: 13px;
+	line-height: 1.5;
+	word-wrap: break-word;
+	margin-top: 10px;
+}
+
+.mod-readme h1,
+.mod-readme h2 {
+	border-bottom: 1px solid var(--border);
+	padding-bottom: 4px;
+}
+
+.mod-readme a {
+	color: var(--accent-text);
+}
+
+.mod-readme code {
+	background: var(--element);
+	padding: 1px 4px;
+	border-radius: 4px;
+}
+
+.mod-readme pre {
+	background: var(--element);
+	padding: 10px;
+	border-radius: 6px;
+	overflow: auto;
+}
+
+.mod-readme pre code {
+	padding: 0;
+}
+
+.mod-readme img {
+	max-width: 100%;
+}
+
+.floating-elem {
+	position: fixed;
+	top: 80px;
+	right: 14px;
+	display: block;
+	z-index: 9;
+	font-size: 20px;
+	color: var(--text-muted);
+	cursor: pointer;
+}
+
+.floating-elem-two {
+	position: fixed;
+	top: 80px;
+	right: 34px;
+	display: block;
+	z-index: 9;
+	font-size: 20px;
+	color: var(--text-muted);
+	cursor: pointer;
+}
+
+.floating-elem:hover {
+	background-color: var(--element-hover);
+}
+
+.floating-elem-two:hover {
+	background-color: var(--element-hover);
+}
+
+/*************
+ * MODAL BOX *
+ *************/
+ .modalbox {
+	display: none;
+	position: fixed;
+	z-index: 99;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: var(--overlay);
+}
+
+.modalbox-content {
+    background-color: var(--element);
+	position: absolute;
+	padding: 18px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+	max-width: 420px;
+}
+
+.modalbox-text {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    font-size: 16px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.modalbox-buttons {
+	display: flex;
+	gap: 8px;
+	justify-content: flex-end;
+	margin-top: 16px;
+}
+
+.modalbox-buttons button {
+	padding: 6px 16px;
+	border: 0;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 13px;
+	background: var(--element-hover);
+	color: var(--text);
+}
+
+.modalbox-buttons button:hover {
+	background: var(--element-active);
+}
+
+.modalbox-buttons button#modalbox-yes {
+	background: var(--accent);
+	color: var(--accent-contrast);
+}
+
+.modalbox-buttons button#modalbox-yes:hover {
+	background: var(--accent-hover);
+}
+
+/*************
+ *  LOADING  *
+ *************/
+
+#loading {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#loading img {
+	height: 64px;
+	width: 64px;
+	margin-bottom: 10px;
+}
+
+.snowflake {
+	position: fixed;
+	background-color: var(--gray-8);
+	user-select: none;
+	z-index: 1000;
+	pointer-events: none;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+  }
+
+/**************
+ *  CHECKBOX  *
+ *************/
+
+input[type=checkbox] {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	margin: 3px;
+	flex-shrink: 0;
+	border: 1px solid var(--border-strong);
+	border-radius: 4px;
+	background: var(--element);
+	cursor: pointer;
+	transition: background ease 0.32s, border-color ease 0.32s;
+	position: relative;
+}
+
+input[type=checkbox]:hover {
+	border-color: var(--accent);
+}
+
+input[type=checkbox]:checked {
+	background: var(--accent);
+	border-color: var(--accent);
+}
+
+input[type=checkbox]:checked:hover {
+	background: var(--accent-hover);
+	border-color: var(--accent-hover);
+}
+
+input[type=checkbox]:checked::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 3px;
+	height: 7px;
+	border: solid var(--accent-contrast);
+	border-width: 0 2px 2px 0;
+	/* -60% y nudges the rotated tick up so it sits optically centered */
+	transform: translate(-50%, -60%) rotate(45deg);
+}

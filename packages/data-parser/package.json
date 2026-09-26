@@ -1,0 +1,19 @@
+{
+  "author": "Noctenium Elixir",
+  "contributors": [
+    "Caali",
+    "Pinkie Pie",
+    "meishu"
+  ],
+  "dependencies": {
+    "@anemanator/vec3": "*"
+  },
+  "description": "Packet definition parsing and the packet compiler.",
+  "files": [
+    "lib/"
+  ],
+  "license": "ISC",
+  "main": "lib/index.js",
+  "name": "@anemanator/data-parser",
+  "version": "1.0.0"
+}

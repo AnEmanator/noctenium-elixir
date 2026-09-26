@@ -1,0 +1,12 @@
+{
+  "name": "@anemanator/vec3",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "author": "Noctenium Elixir",
+  "contributors": [
+    "Caali",
+    "Pinkie Pie"
+  ],
+  "license": "CC0-1.0"
+}

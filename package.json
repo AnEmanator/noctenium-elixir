@@ -1,0 +1,51 @@
+{
+  "name": "@noctenium-elixir/noctenium-elixir",
+  "version": "1.4.2",
+  "description": "Modding framework for Europe Classic+ that runs mods through the Noctenium proxy bridge.",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NocteniumElixir/NocteniumElixir.git"
+  },
+  "author": "AnEmanator",
+  "contributors": [
+    "Caali",
+    "Pinkie Pie",
+    "meishu"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "bugs": {
+    "url": "https://github.com/NocteniumElixir/NocteniumElixir/issues"
+  },
+  "homepage": "https://github.com/NocteniumElixir/NocteniumElixir#readme",
+  "workspaces": [
+    "packages/*",
+    "compat/*"
+  ],
+  "scripts": {
+    "postinstall": "node bin/postinstall.js",
+    "build": "node scripts/build.js",
+    "release": "node scripts/release.js",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix --max-warnings 0",
+    "format": "prettier --write \"{bin,bridge,tests}/**/*.js\"",
+    "format:check": "prettier --check \"{bin,bridge,tests}/**/*.js\"",
+    "test": "node tests/electron-host-selftest.js",
+    "test:installer": "node tests/installer-selftest.js"
+  },
+  "dependencies": {
+    "binary-search": "^1.3.6",
+    "dompurify": "^3.4.15",
+    "marked": "^4.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "electron": "44.2.0",
+    "eslint": "10.10.0",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "17.12.0",
+    "prettier": "3.9.6"
+  }
+}

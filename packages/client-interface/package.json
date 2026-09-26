@@ -1,0 +1,15 @@
+{
+  "name": "@anemanator/client-interface",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Game client injection, in-client RPC, and GPK management.",
+  "main": "index.js",
+  "license": "GPL-3.0",
+  "author": "Noctenium Elixir",
+  "contributors": [
+    "Caali"
+  ],
+  "dependencies": {
+    "@anemanator/toolbox-mui": "*"
+  }
+}

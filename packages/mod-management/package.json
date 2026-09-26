@@ -1,0 +1,15 @@
+{
+  "name": "@anemanator/mod-management",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Utility functions for managing Noctenium Elixir mods.",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Noctenium Elixir",
+  "contributors": [
+    "Caali"
+  ],
+  "dependencies": {
+    "@anemanator/toolbox-mui": "*"
+  }
+}

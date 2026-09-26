@@ -1,0 +1,8 @@
+{
+    "Network": ["packet", "proxy", "opcode", "hook", "dispatch"],
+    "Client": ["ui", "interface", "gpk", "hud", "overlay"],
+    "Library": ["api", "library", "framework", "high-level api"],
+    "Gameplay": ["ping", "prediction", "skill", "combat", "damage", "cooldown", "rotation"],
+    "QoL": ["auto", "convenience", "shortcut", "quality of life", "qol"],
+    "Visual": ["custom", "color", "font", "theme", "cosmetic"]
+}

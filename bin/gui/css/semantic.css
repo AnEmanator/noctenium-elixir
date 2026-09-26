@@ -1,0 +1,34 @@
+/* Semantic role tokens. The only place ramp steps (--gray-N / --accent-N from the
+   active theme file) get referenced - components use these role names, never a raw
+   step and never a hex. Theme-independent, always loaded. */
+:root {
+    /* surfaces, lightest to most raised */
+    --bg: var(--gray-1);              /* app + log background */
+    --bg-subtle: var(--gray-2);       /* header, tab bar, mod cards, scrollbar track */
+    --element: var(--gray-3);         /* settings rows, modal/detail panels, readme code, hover on cards + nav controls */
+    --element-hover: var(--gray-4);   /* secondary button rest, header-button hover, selected tab, float hover */
+    --element-active: var(--gray-5);  /* secondary button hover, open dropdown */
+
+    /* borders */
+    --border: var(--gray-6);          /* card borders, readme rules, scrollbar thumb */
+    --border-strong: var(--gray-7);   /* scrollbar thumb hover */
+
+    /* text */
+    --text: var(--gray-12);
+    --text-muted: var(--gray-11);     /* log text, card meta, float icons */
+
+    /* accent - one key + one hover, per Radix Jade */
+    --accent: var(--accent-9);        /* start/stop btn, github btn, modal confirm, admin badge */
+    --accent-hover: var(--accent-10);
+    --accent-text: var(--accent-11);  /* readme links, active view toggle */
+    --selection: var(--accent-5);     /* ::selection */
+
+    /* status - same punch on light + dark. a theme may still override these.
+       ok = Radix Grass 9, warn/danger match the log colours. */
+    --ok: #46a758;
+    --warn: #f2820c;
+    --danger: #ee4444;
+
+    /* non-colour */
+    --card-radius: 10px;
+}
