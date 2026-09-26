@@ -1,8 +1,8 @@
 {
-	"version": "1.4.2",
+	"version": "1.4.3",
 	"files": {
 		"LICENSE": "83824a948e0ad7335c711d008c18891beae5b5b56865f48e998f428749fef612",
-		"README.md": "dff79bae808c168ffec91790f5b6b1310820fac3e34a8f2e59e565bfda242bad",
+		"README.md": "7b375c74a58222370d4cbe90ba501738a6bc8756de0773a6f90a416fbaefbd47",
 		"bin/bridge-installer.js": "fed8ffb789018a43da134af6b9567b84e9a06da66a23ca1aa1dbd4f72d04f492",
 		"bin/config-migration.js": "7e36bbac328d849f775331ee60fdf02e927a9b763f0beb8bac4babcd3290e58f",
 		"bin/config.js": "d84f803006ad2d38b041f368dee755d57ecf10e933d98bc7e7401018d7de9789",
@@ -81,8 +81,8 @@
 		"doc/mod/other.md": "03626549a59abf648ee59163b3b8acbf66c36513cb1e76d6e277bc044c926e30",
 		"doc/mod/settings.md": "03626549a59abf648ee59163b3b8acbf66c36513cb1e76d6e277bc044c926e30",
 		"doc/mod/timers.md": "5f810a37b1b9fac616628986958645eb0d8448701165f43251f73eb46116fac3",
-		"package-lock.json": "6da458daaf30d54f653a8389f148cafa73007b66aa45132fc845dd0f1aa6452e",
-		"package.json": "efebf7bdcbebd41a615ac19224842b82432a49d74892f8744ec9e864897b5555",
+		"package-lock.json": "eb4a0fba6e17dcba6d3cc437677a102693df4ca6875b4f9050d65a82a33cd015",
+		"package.json": "e55cbfa91d7c1602ad863a48b556062c86b51fe5d90dddedd6cbec1fb38daa30",
 		"packages/client-interface/GPKManager.js": "7758678d78e5ae4908d38d98095ca80182a89bf11ea0a4c060b3c27815b769e0",
 		"packages/client-interface/LICENSE": "2a172b343657f9024bdf0836e769e6e8cfdf1ee13da658ec69c68b0ab58d53ad",
 		"packages/client-interface/client-interface-32.dll": "afecccf37fec008ecef87bf47c94bf36d880a3963ecb5407bbc9052bfb70a4cd",

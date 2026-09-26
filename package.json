@@ -1,6 +1,6 @@
 {
   "name": "@noctenium-elixir/noctenium-elixir",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Modding framework for Europe Classic+ that runs mods through the Noctenium proxy bridge.",
   "license": "GPL-3.0",
   "repository": {

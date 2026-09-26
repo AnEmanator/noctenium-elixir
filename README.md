@@ -44,30 +44,13 @@ have. Mods are updated separately. Either can be turned off on the **Settings** 
 Start with [`doc/main.md`](doc/main.md) and `bin/mod.js`. The mod API is unchanged from
 upstream Toolbox.
 
-### Contributing
+### Layout
 
-Enable the pre-commit format+lint hook once per clone:
-
-```sh
-git config core.hooksPath .githooks
-```
-
-| command                                   | action                                    |
-| ----------------------------------------- | ----------------------------------------- |
-| `npm run lint`                            | ESLint over the repo                      |
-| `npm run format` / `npm run format:check` | Prettier over `bin/`, `bridge/`, `tests/` |
-| `npm test`                                | Electron host self-test                   |
-| `npm run test:installer`                  | game-side installer self-test             |
-
-First-party code is tracked under `packages/` and linked in as npm workspaces; the
-deprecated `tera-*` names are shims under `compat/`. The bridge adapter lives in
-`bin/noctenium-preload/`, the game-side preload and its installer in `bridge/`.
-See [`architecture/`](architecture/) for the full picture.
+First-party code lives under `packages/`; the deprecated `tera-*` names are shims under
+`compat/`. The bridge adapter lives in `bin/noctenium-preload/`, the game-side preload and
+its installer in `bridge/`.
 
 The executable launchers just run `bin/index-gui.js` / `bin/index-cli.js`.
-
-Follow [Conventional Commits](https://www.conventionalcommits.org/) and bump `version` in
-`package.json` with each change.
 
 ## Credits
 
